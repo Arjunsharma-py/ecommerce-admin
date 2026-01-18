@@ -2,7 +2,7 @@ name: Deploy Vite app to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # or 'main' if that's your default branch
+    branches: [main] # or 'main' if that's your default branch
 
 permissions:
   contents: write
@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build -- --base=/
+        run: npm run build -- --base=/ecommerce-admin/
 
       - name: Create 404.html for SPA routing
         run: cp dist/index.html dist/404.html
